@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart | The Hangar</title>
+  <link rel="stylesheet" href="sytle.css">
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js" defer></script>
+  <script src="checkout.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    FREE SHIPPING ON ORDERS OVER $200 ✦ COLLECT THE FLEET
+  </div>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="index.html">
+        <span class="brand-symbol">✈</span>
+        <span>THE <strong>HANGAR</strong>
+          <small>AVIATION COLLECTIBLES</small>
+        </span>
+      </a>
+
+      <nav>
+        <a class="nav-link" href="index.html">Shop aircraft</a>
+        <a class="cart-link active" href="checkout.html">
+          🛒 Your cart
+          <span class="cart-count" id="cart-count">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="checkout-main container">
+    <a class="back-link" href="index.html">← Continue shopping</a>
+
+    <div class="section-heading checkout-heading">
+      <div>
+        <p class="section-kicker">ALMOST CLEARED FOR TAKEOFF</p>
+        <h1>Your hangar<span class="period">.</span></h1>
+        <p class="checkout-subtitle">
+          A final look at the fleet you've collected.
+        </p>
+      </div>
+    </div>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <div class="empty-illustration">✈</div>
+      <h2>Your hangar is empty.</h2>
+      <p>
+        You haven't picked anything yet.
+        Explore the collection and find your first aircraft.
+      </p>
+      <a class="primary-button" href="index.html">
+        Shop aircraft ↗
+      </a>
+    </div>
+
+    <div class="checkout-layout" id="checkout-layout" hidden>
+      <section class="checkout-items">
+        <div class="cart-section-title">
+          <h2>Your aircraft <span id="total-quantity"></span></h2>
+          <button id="clear-cart" class="clear-button">
+            Clear entire cart
+          </button>
+        </div>
+
+        <div id="cart-items"></div>
+      </section>
+
+      <aside class="order-summary">
+        <p class="summary-kicker">ORDER OVERVIEW</p>
+        <h2>Flight manifest</h2>
+
+        <div class="summary-line">
+          <span>Items (<span id="summary-count">0</span>)</span>
+          <strong id="subtotal">$0.00</strong>
+        </div>
+
+        <div class="summary-line">
+          <span>Shipping</span>
+          <strong id="shipping">$0.00</strong>
+        </div>
+
+        <div class="summary-divider"></div>
+
+        <div class="summary-total">
+          <span>Total</span>
+          <strong id="total">$0.00</strong>
+        </div>
+
+        <p class="summary-note">
+          Demo checkout for W11B.
+          No real payment will be collected.
+        </p>
+
+        <a class="continue-button" href="index.html">
+          Add more aircraft ↗
+        </a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© THE HANGAR — 2026</span>
+      <span>CRAFTED FOR AVIATION LOVERS.</span>
+    </div>
+  </footer>
+</body>
+</html>
